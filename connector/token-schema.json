@@ -1,0 +1,29 @@
+{
+  "title": "课程生成器 配置",
+  "title_en": "CourseGenie Setup",
+  "description": "开箱即用：连接器默认连我们托管的课程生成服务，两项都可以不改，直接说要做什么课即可。若你自建了后端，把「服务地址」改成你自己的。DeepSeek Key 只用于连接器做一次只读凭据自检，可留空。两项都只保存在本机 ~/.workbuddy，不经过云端。托管服务可开启单租户演示模式（DEMO_ONLY）：开启时课程与素材 24 小时后自动清理，每个 IP 每分钟最多 6 次生成、每天最多 5 门课、单次上传不超过 50MB、同时只跑 1 个生成任务；未开启时以服务方配置为准。",
+  "description_en": "Works out of the box: the connector points at the hosted CourseGenie service by default — just tell it what course to build. Both fields are optional. Point the service URL at your own backend if you self-host. The DeepSeek key is only used for a read-only credential self-check and may be left empty. Values are stored locally in ~/.workbuddy only. The hosted service can run in single-tenant demo mode (DEMO_ONLY): when enabled, courses and materials are deleted after 24 hours, each IP may start 6 generations per minute and 5 courses per day, uploads are capped at 50 MB, and only one generation job runs at a time; when disabled, the operator's configuration applies.",
+  "docUrl": "https://platform.deepseek.com/api_keys",
+  "docLabel": "如何获取 DeepSeek API Key？（可选）",
+  "fields": [
+    {
+      "key": "COURSE_BACKEND_URL",
+      "label": "课程生成服务地址",
+      "label_en": "Service URL",
+      "type": "text",
+      "required": false,
+      "defaultValue": "http://127.0.0.1:8000",
+      "placeholder": "http://127.0.0.1:8000",
+      "description": "默认已填好（我们托管的演示服务），一般不用改。自建后端时改成你的地址，例如 http://127.0.0.1:8000（/api 可省略，连接器会自动补）。托管服务开启单租户演示模式（DEMO_ONLY）时：课程/素材 24 小时后自动清理；每个 IP 每分钟最多 6 次生成、每天最多 5 门课、单次上传 ≤50MB、同时只跑 1 个生成任务。"
+    },
+    {
+      "key": "DEEPSEEK_API_KEY",
+      "label": "DeepSeek API Key（可选）",
+      "label_en": "DeepSeek API Key (optional)",
+      "type": "password",
+      "required": false,
+      "placeholder": "sk-…（可留空）",
+      "description": "可留空：课程生成用的是服务端的模型凭据。填写后连接器会在开工时对 DeepSeek 做一次只读凭据自检（不发送任何课程资料）。仅保存在本机。"
+    }
+  ]
+}

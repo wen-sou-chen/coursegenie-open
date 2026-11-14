@@ -1,0 +1,26 @@
+{
+  "name": "课程生成器",
+  "name_zh": "课程生成器",
+  "name_en": "CourseGenie",
+  "description": "把 PDF/PPT/视频/文本变成一门完整课程：生成大纲、逐篇讲义、插图与习题，并一键写入你的 Obsidian 笔记库（概念自动双链）。",
+  "description_zh": "把 PDF/PPT/视频/文本变成一门完整课程：生成大纲、逐篇讲义、插图与习题，并一键写入你的 Obsidian 笔记库（概念自动双链）。",
+  "description_en": "Turn PDF/PPT/video/text into a complete course: outline, per-lesson handouts, illustrations and quizzes, exported straight into your Obsidian vault with automatic concept backlinks.",
+  "source": "coursegenie",
+  "type": "mcp",
+  "auth_mode": "token",
+  "version": "1.0.5",
+  "minWorkbuddyVersion": "4.24.0",
+  "icon": "icon.svg",
+  "examples_zh": [
+    "我有一份 12 页的 AI 幻觉资料 PDF，帮我做成 4 章 8 节的课，先给大纲我看",
+    "大纲没问题，第 3 章调一下顺序，然后生成第一节样课看看插图什么风格",
+    "样课可以，按这个风格把整门课都生成出来",
+    "生成完了，写进我的 Obsidian 库 D:\\我的课程，概念之间记得加双链"
+  ],
+  "examples_en": [
+    "Turn this 12-page AI hallucination PDF into a 4-chapter, 8-lesson course and show me the outline first",
+    "The outline looks fine — reorder chapter 3, then generate the first lesson as a sample so I can check the illustration style",
+    "The sample works; generate the whole course in that style",
+    "Done — write it into my Obsidian vault at D:\\my-courses with concept backlinks"
+  ]
+}

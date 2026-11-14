@@ -1,0 +1,19 @@
+services:
+  coursegenie:
+    build: .
+    image: coursegenie:local
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env          # 不存在时用下面的默认值（mock 模式）
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      IMAGE_PROVIDER: ${IMAGE_PROVIDER:-mock}
+      AUTH_ENABLED: ${AUTH_ENABLED:-false}
+    volumes:
+      - coursegenie-data:/data
+    restart: unless-stopped
+
+volumes:
+  coursegenie-data:

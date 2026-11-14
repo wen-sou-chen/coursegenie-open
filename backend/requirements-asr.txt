@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+# 任务 102 可选依赖：音视频素材的本地语音转写（本地跑，数据不出本机）
+#
+# 安装：backend/.venv/Scripts/python.exe -m pip install -r requirements-asr.txt
+# 不装也能用：音视频素材照旧入库为「无文字素材」，素材页写明跳过原因，接口不 500；
+#            装好后在素材行点「重新转写」即可。
+#
+# ⚠️ 首次运行会自动从 HuggingFace 下载模型：默认 small（≈0.5GB）。
+#    模型名可用 **`.env` 的 `ASR_MODEL`（推荐，与本项目其它配置一致）** 或进程环境变量 `ASR_MODEL` 配
+#    （small / base / medium / large-v3 …）。
+# ⚠️ 依赖不轻：实测会拉进 ctranslate2 + onnxruntime + tokenizers + av + numpy
+#    （本轮实测安装后约 264MB + 模型 0.5GB），所以刻意**不放进核心 requirements.txt**。
+#    它**不需要 torch、也不需要系统 ffmpeg**（自带 PyAV 解码）。
+# 任务 103：中文转写**默认带简体引导语**（ASR_ZH_PROMPT）—— faster-whisper 出厂默认出繁体，
+#    光传 language="zh" 一点都不管用；检测到不是中文就不传（硬塞会把英文整段转坏）。
+# ⚠️ 准不准看**模型大小**（同一段 15 秒中文素材、CPU + int8 实测）：
+#      small（默认，权重约 0.5GB）：转写 ≈2–3 秒（≈0.15–0.2× 实时），但**同音错字多**
+#        （实测「多菌」→「多军」、「酵母」→「教母」、「产气」→「产器」）；
+#      medium / large-v3（`.env` 里写 `ASR_MODEL=medium` / `large-v3`）：**更准更慢**，权重约 1.5GB / 3.1GB，
+#        首次要下载（本轮未实测：真机缓存里只有 tiny / small，下载没跑完）。
+#    ⇒ 专业名词多、对错字敏感时：把 `.env` 的 `ASR_MODEL` 调到 medium 以上，并开 ASR_DOMAIN_PROMPT=true
+#      （把课程标题 / 学科拼进引导语，实测「多军」→「多菌」这类同音错字跟着少）。
+# 注：ASR 是本地模型，不是大模型调用 ⇒ 大模型花费 0，真正花的是 CPU 时间
+#    （1 小时视频在 CPU 上约 10–40 分钟；转写在上传后**后台**跑，不影响上传接口）。
+faster-whisper>=1.0

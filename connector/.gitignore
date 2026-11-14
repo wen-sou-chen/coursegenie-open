@@ -1,0 +1,39 @@
+# 构建产物
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.python-version
+
+# 测试与缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 本地环境与凭据 —— 绝不允许进仓库
+.env
+.env.*
+*.env
+secrets.json
+*.key
+*.pem
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地调试产物
+.tmp/
+*.log
+coursegenie-mcp-tasks.json

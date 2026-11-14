@@ -1,0 +1,377 @@
+{
+  "source": "GET /api/plan/8f4b90fcf5e24844929968c10aee7395 (AI 幻觉治理实战) -> plan.graph",
+  "captured_at": "2026-09-20 DSH 走查第 1 页只读取证(%TEMP%/cg_walk/plan_dump.json)",
+  "graph": {
+    "nodes": [
+      {
+        "id": "4b960c1c2ce348359383aacdbbdc3166",
+        "key": "1",
+        "node_key": "1",
+        "label": "AI 幻觉初印象",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "60347afca2c84188944a6e3036e7d69e",
+        "key": "1.1",
+        "node_key": "1.1",
+        "label": "AI 也会一本正经地胡说",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "5759f33359b74fbdb89f1596a28ea50a",
+        "key": "1.2",
+        "node_key": "1.2",
+        "label": "为什么幻觉是 AI 应用的头号顽疾",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "a4e31ecbf4b145048893bab28abfd7ed",
+        "key": "2",
+        "node_key": "2",
+        "label": "五大病根全解析",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "16819a34da6347988f05f4080c9bfd83",
+        "key": "2.1",
+        "node_key": "2.1",
+        "label": "概率机器的本质（逐词预测只顾顺不顾真）",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "df64412326c7471ba22820fa066ce085",
+        "key": "2.2",
+        "node_key": "2.2",
+        "label": "训练数据的裂纹（知识盲区与杂质污染）",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "a0d6e0cca122428eb6a804dc9890d5b2",
+        "key": "2.3",
+        "node_key": "2.3",
+        "label": "提示词与角色陷阱（模糊指令诱发自由发挥）",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "dc60ec4da0c646e2adcbf6a9399c3d11",
+        "key": "2.4",
+        "node_key": "2.4",
+        "label": "创造性采样策略的双刃剑",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "7d4f1315d6c34434839f33a51a811dc1",
+        "key": "2.5",
+        "node_key": "2.5",
+        "label": "自信语气掩盖的认知盲区",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "132bbe471c0242d3a635eb30d2c01329",
+        "key": "3",
+        "node_key": "3",
+        "label": "方法一：反思校对",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "7375bae217544fef86994cbab406d1fb",
+        "key": "3.1",
+        "node_key": "3.1",
+        "label": "自我认知声明模板",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "1b7e17ab1de14e52b181f52ef6a5de5b",
+        "key": "3.2",
+        "node_key": "3.2",
+        "label": "置信度自评机制",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "7657e4365e2e448ba053ac6bad02d37e",
+        "key": "4",
+        "node_key": "4",
+        "label": "方法二：引用锚定",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "2986dd6b007f4a598b705b0c00f05325",
+        "key": "4.1",
+        "node_key": "4.1",
+        "label": "出处标注标准格式",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "84948a784ba44dc48429ee9a0e194b62",
+        "key": "4.2",
+        "node_key": "4.2",
+        "label": "文件预处理与索引构建",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "9b379a0d3bc7411aab195ef1fe9fa247",
+        "key": "5",
+        "node_key": "5",
+        "label": "方法三：手动RAG",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "e8bfa9d55a914df5a0d21831fba54a83",
+        "key": "5.1",
+        "node_key": "5.1",
+        "label": "上下文窗口的科学利用",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "81f88a642d4e4db1aefc2248d7bf511c",
+        "key": "5.2",
+        "node_key": "5.2",
+        "label": "关键信息提取与标注",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "55809aa40b6e48e2a89dca6df28121f2",
+        "key": "6",
+        "node_key": "6",
+        "label": "方法四：温度锁零",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "670ead92dc4a4b9fba6c24a0a61d9035",
+        "key": "6.1",
+        "node_key": "6.1",
+        "label": "确定性输出与创意输出的平衡",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "322a6605137b4e31a357ef9b3f3ecacf",
+        "key": "6.2",
+        "node_key": "6.2",
+        "label": "API调用参数优化",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "4a92e4be5ba0497b8c44130896cd44f8",
+        "key": "7",
+        "node_key": "7",
+        "label": "方法五：多模型交叉",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "22c6bce9cad2469d834b77c6bffdaca7",
+        "key": "7.1",
+        "node_key": "7.1",
+        "label": "模型差异性分析",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "c769e04ee455400bbe930687abd0bb7a",
+        "key": "7.2",
+        "node_key": "7.2",
+        "label": "简易交叉验证架构",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "df558da52ec94f16a320ff58355fa022",
+        "key": "8",
+        "node_key": "8",
+        "label": "五法组合实战",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "6274cd3627a64a69adca6ee3c942ce61",
+        "key": "8.1",
+        "node_key": "8.1",
+        "label": "风险等级评估框架",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "f44e68b0399f4095b2fe74481f610a94",
+        "key": "8.2",
+        "node_key": "8.2",
+        "label": "T型治理工作流",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "12e86d153be44ef1a366dae7069823ce",
+        "key": "9",
+        "node_key": "9",
+        "label": "ROI分析与成本控制",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "4cd43e2417074edca15c32db5b43c58d",
+        "key": "9.1",
+        "node_key": "9.1",
+        "label": "五法性能基准测试",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "9226c6a1fc094f6bb12b5d2edd09aea7",
+        "key": "9.2",
+        "node_key": "9.2",
+        "label": "速查决策工具",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "f7ff84a4615a447aa17ab3733f9c580b",
+        "key": "10",
+        "node_key": "10",
+        "label": "30分钟快速落地",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "155675b526e2430bb2c33cdc260a8a7b",
+        "key": "10.1",
+        "node_key": "10.1",
+        "label": "材料预处理套路",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "849fe5d3435e4b55bf7f2f9f22f73080",
+        "key": "10.2",
+        "node_key": "10.2",
+        "label": "提示词工程组件库",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "6d2d34e43bd44b858df07626900679c5",
+        "key": "11",
+        "node_key": "11",
+        "label": "行业专项治理方案",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "0464c0ee7fda472ab30c84c70e1ebad6",
+        "key": "11.1",
+        "node_key": "11.1",
+        "label": "金融合规报告方案",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "6c8b5766392e492caf95800665ccc578",
+        "key": "11.2",
+        "node_key": "11.2",
+        "label": "医疗问答治理方案",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "c2737432a2164e5487030784923917a9",
+        "key": "12",
+        "node_key": "12",
+        "label": "持续治理机制建设",
+        "type": "chapter",
+        "node_type": "chapter"
+      },
+      {
+        "id": "2061f224150d4f318c8ded7513a1435a",
+        "key": "12.1",
+        "node_key": "12.1",
+        "label": "幻觉率监测指标",
+        "type": "point",
+        "node_type": "point"
+      },
+      {
+        "id": "3d99f3813b05495a8ac9a06d07822356",
+        "key": "12.2",
+        "node_key": "12.2",
+        "label": "持续改进飞轮",
+        "type": "point",
+        "node_type": "point"
+      }
+    ],
+    "edges": [
+      {
+        "source": "4b960c1c2ce348359383aacdbbdc3166",
+        "target": "a4e31ecbf4b145048893bab28abfd7ed",
+        "label": "前置"
+      },
+      {
+        "source": "a4e31ecbf4b145048893bab28abfd7ed",
+        "target": "132bbe471c0242d3a635eb30d2c01329",
+        "label": "前置"
+      },
+      {
+        "source": "132bbe471c0242d3a635eb30d2c01329",
+        "target": "7657e4365e2e448ba053ac6bad02d37e",
+        "label": "前置"
+      },
+      {
+        "source": "7657e4365e2e448ba053ac6bad02d37e",
+        "target": "9b379a0d3bc7411aab195ef1fe9fa247",
+        "label": "前置"
+      },
+      {
+        "source": "9b379a0d3bc7411aab195ef1fe9fa247",
+        "target": "55809aa40b6e48e2a89dca6df28121f2",
+        "label": "前置"
+      },
+      {
+        "source": "55809aa40b6e48e2a89dca6df28121f2",
+        "target": "4a92e4be5ba0497b8c44130896cd44f8",
+        "label": "前置"
+      },
+      {
+        "source": "4a92e4be5ba0497b8c44130896cd44f8",
+        "target": "df558da52ec94f16a320ff58355fa022",
+        "label": "前置"
+      },
+      {
+        "source": "df558da52ec94f16a320ff58355fa022",
+        "target": "12e86d153be44ef1a366dae7069823ce",
+        "label": "前置"
+      },
+      {
+        "source": "12e86d153be44ef1a366dae7069823ce",
+        "target": "f7ff84a4615a447aa17ab3733f9c580b",
+        "label": "前置"
+      },
+      {
+        "source": "f7ff84a4615a447aa17ab3733f9c580b",
+        "target": "6d2d34e43bd44b858df07626900679c5",
+        "label": "前置"
+      },
+      {
+        "source": "6d2d34e43bd44b858df07626900679c5",
+        "target": "c2737432a2164e5487030784923917a9",
+        "label": "前置"
+      }
+    ]
+  }
+}

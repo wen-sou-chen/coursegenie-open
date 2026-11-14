@@ -1,0 +1,44 @@
+{
+  "name": "coursegenie-expert",
+  "version": "1.0.0",
+  "description": "Turns source materials into a complete, deliverable course: outline, lesson handouts, teaching plans, student sheets, quizzes, slides and figures, exported as a ready-to-ship package.",
+  "author": {
+    "name": "CourseGenie",
+    "email": "support@example.com"
+  },
+  "agents": ["./agents/course-architect.md"],
+  "expertType": "agent",
+  "agentName": "course-architect",
+  "displayName": {
+    "zh": "课程架构师",
+    "en": "Course Architect"
+  },
+  "profession": {
+    "zh": "课程设计与交付专家",
+    "en": "Course Design & Delivery Expert"
+  },
+  "displayDescription": {
+    "zh": "把资料变成一门完整课程：生成大纲、讲义、教案、学案、习题与配图，并打包成可直接交付给学员的课程文件。",
+    "en": "Turns your materials into a complete course: outline, handouts, teaching plans, student sheets, quizzes and figures, packaged as a ready-to-deliver course."
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "15-Education",
+  "defaultInitPrompt": {
+    "zh": "我有一份资料，帮我做成 4 章 8 节的课，先出大纲给我看",
+    "en": "Turn my material into a 4-chapter, 8-lesson course and show me the outline first"
+  },
+  "plugin": "coursegenie-expert",
+  "tags": [
+    { "zh": "课程设计", "en": "Course Design" },
+    { "zh": "讲义", "en": "Lesson Handouts" },
+    { "zh": "知识库", "en": "Knowledge Base" }
+  ],
+  "quickPrompts": [
+    { "zh": "把这份 PDF 做成课", "en": "Turn this PDF into a course" },
+    { "zh": "先出大纲给我确认", "en": "Draft the outline for my review" },
+    { "zh": "做一节样课看插图风格", "en": "Render one sample lesson to check the figure style" }
+  ],
+  "dependencies": {
+    "mcpServers": "./.mcp.json"
+  }
+}

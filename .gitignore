@@ -1,0 +1,70 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Node / 前端 ----
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# ---- 环境与密钥 ----
+.env
+.env.local
+.secrets/
+*.pem
+*.key
+
+# ---- 日志与临时文件 ----
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ---- 运行时数据（本地生成，不入库） ----
+backend/data/*.db
+backend/data/*.sqlite*
+backend/storage/
+data/
+
+# ---- IDE ----
+.idea/
+.vscode/
+
+# ---- 备份产物（scripts/backup_data.py 的默认输出目录） ----
+backups/
+
+# ---- 连接器交付包（本地打包产物，不入库） ----
+coursegenie-connector-*.zip
+
+# ---- 专家/技能提交包（本地打包产物，不入库） ----
+packaging/dist/
+
+# 生成物（tools/ops/review_pack.py 的输出等）
+build/
+
+# 个人档案的本地原料与私有区块：永不进仓库（见 profile/PROFILE.md 头部）
+profile/private/
+profile/raw/
+*档案原料*
+profile/.source
+profile/.inbox.md
+profile/.inbox.suggested.md
+
+# ---- 数据与个人资产（公开仓库不收） ----
+backend/data/
+backend/storage/
+profile/
+.secrets/
+*.db
+*.db-wal
+*.db-shm
+deliveries/
+
+# ---- 构建产物 ----
+docs/images/*.psd

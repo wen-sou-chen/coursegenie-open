@@ -1,0 +1,15 @@
+.git
+.gitignore
+**/__pycache__
+**/*.pyc
+**/.venv
+**/venv
+**/node_modules
+frontend/dist
+backend/storage
+backend/data
+**/*.db
+**/*.log
+.secrets
+profile
+docs/images/*.psd

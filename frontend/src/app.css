@@ -1,0 +1,88 @@
+/* CourseGenie 全局视觉规范 */
+html,
+body {
+  background: #f5f7fa;
+}
+
+.section-card.ant-card {
+  border-radius: 12px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.section-card.ant-card:hover {
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.06),
+    0 10px 24px rgba(79, 70, 229, 0.10);
+  transform: translateY(-2px);
+}
+
+.ant-card {
+  border-radius: 12px;
+}
+
+.ant-card .ant-card {
+  border-radius: 10px;
+}
+
+/* 小屏堆叠 */
+@media (max-width: 768px) {
+  .ant-space-horizontal {
+    flex-wrap: wrap;
+  }
+  .ant-card-body {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* P5-2：质检里点「跳到正文」时，命中的那一段短暂高亮 */
+.cg-jump-hit {
+  background: #fde68a;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px #fde68a;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 任务 76：点图放大弹窗里的**流程图**（mermaid 在弹窗里重新渲染的那一份）。
+   mermaid 会给自己画出来的 svg 写上 `style="max-width: 276px"`（就是页面上的小尺寸），
+   放进弹窗后它仍然只有那么大 —— 这里放开限制铺满弹窗宽度；高度压进视口，
+   svg 的 viewBox（preserveAspectRatio=meet）会等比缩放到整幅可见，不裁切。 */
+.figure-zoom-live svg {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 68vh !important;
+}
+
+/* ===== 任务 79：图的入场动效（预览页的图/图表卡 + 放大弹窗）=====
+   用户看了 HTML 课件的慢速动画后要「这种效果」；DSH 定稿只做 A+B 两档：
+   A 淡入 + 上浮、B 遮罩从左到右扫出（clip-path），两者**同时开始、同时结束**。
+   ⚠️ 合成**一条** animation 而不是两条，有两个原因：
+     ① 两条动画即使同时结束也是两个 CSSAnimation ⇒ `document.getAnimations()` 会翻倍
+        （8 个元素 = 16 条），而验收口径是「同屏同时运行的动画数 ≤ 8」；
+     ② 收尾只留一条缓出曲线，观感一致、少一次合成开销。
+   ⚠️ 这里**不写** `@media (prefers-reduced-motion: reduce) { animation: none }`：
+   样板那轮的教训是「跟随系统静默禁用」会让用户以为坏了 ⇒ 默认一定播，界面给开关。 */
+@keyframes cg-fig-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* 滚动中进入视口先「等着」（不可见），滚动停止后由 useEnterOnce.ts 换成 .fig-enter 完整播一遍 */
+.fig-enter-wait {
+  opacity: 0;
+}
+
+/* 1.05s（落在 §B 的 0.9–1.1s 区间）、收尾很慢的缓出；播完由 JS 摘掉这个类 ⇒ 不留残余 transform/clip-path */
+.fig-enter {
+  animation: cg-fig-enter 1.05s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+}

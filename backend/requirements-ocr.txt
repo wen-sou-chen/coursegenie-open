@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# 任务 54 可选依赖：图片素材 OCR（本地跑，数据不出本机）
+#
+# 安装：backend/.venv/Scripts/python.exe -m pip install -r requirements-ocr.txt
+# 不装也能用：图片素材照旧入库为「无文字素材」，素材页写明跳过原因，接口不 500。
+#
+# ⚠️ 依赖不轻：实测会拉进 onnxruntime + opencv-python + numpy + shapely + pyclipper
+#    （合计约 400MB），所以刻意**不放进核心 requirements.txt**。
+rapidocr-onnxruntime>=1.4.4

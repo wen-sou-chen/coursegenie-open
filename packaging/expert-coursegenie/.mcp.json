@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "coursegenie": {
+      "type": "http",
+      "url": "https://mcp.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${COURSEGENIE_MCP_TOKEN}"
+      },
+      "x-workbuddy": {
+        "displayName": {
+          "zh": "课程生成器",
+          "en": "CourseGenie"
+        },
+        "description": {
+          "zh": "连接课程生成服务后，可上传资料、生成大纲与整门课、导出交付包。",
+          "en": "Connect to CourseGenie to upload sources, build a full course and export a delivery package."
+        },
+        "icon": "./avatars/expert.png",
+        "auth": {
+          "type": "token",
+          "tokenSchema": {
+            "title": {
+              "zh": "配置课程生成器访问令牌",
+              "en": "Configure CourseGenie access token"
+            },
+            "description": {
+              "zh": "粘贴服务方提供的访问令牌。令牌只保存在本机，用于调用课程生成服务。",
+              "en": "Paste the access token provided by the CourseGenie operator. It is stored locally and used only to call the course service."
+            },
+            "docUrl": "https://demo.example.com",
+            "docLabel": {
+              "zh": "如何获取访问令牌？",
+              "en": "How to get an access token?"
+            },
+            "fields": [
+              {
+                "key": "COURSEGENIE_MCP_TOKEN",
+                "label": {
+                  "zh": "访问令牌",
+                  "en": "Access Token"
+                },
+                "placeholder": {
+                  "zh": "粘贴课程生成器访问令牌",
+                  "en": "Paste the CourseGenie access token"
+                },
+                "type": "password",
+                "required": true,
+                "description": {
+                  "zh": "会写入 Authorization: Bearer 请求头；不随课程资料上传，也不写入日志。",
+                  "en": "Sent as the Authorization: Bearer header; never uploaded with course materials or written to logs."
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

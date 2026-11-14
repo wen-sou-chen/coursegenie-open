@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coursegenie-mcp"
+version = "1.0.5"
+description = "WorkBuddy connector (MCP server) for CourseGenie: turn source materials into a full course and export it to Obsidian."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [{ name = "CourseGenie" }]
+keywords = ["mcp", "workbuddy", "course", "obsidian", "coursegenie"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "mcp[cli]>=1.2,<2",
+  "httpx>=0.27,<1",
+]
+
+[project.urls]
+Homepage = "https://github.com/coursegenie/coursegenie-mcp"
+
+[project.scripts]
+coursegenie-mcp = "course_generator.__main__:main"
+
+[tool.setuptools]
+packages = ["course_generator"]

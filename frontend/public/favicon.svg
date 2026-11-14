@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="CourseGenie">
+  <!-- 任务 48t：品牌占位图标（简洁几何标记），等正式品牌图出来再换。
+       与 favicon.ico 同一套几何：圆角方块 + 开口 50° 的 C。 -->
+  <rect width="32" height="32" rx="7" fill="#4F46E5"/>
+  <path d="M20.5 10.64 A7 7 0 1 0 20.5 21.36" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+</svg>
