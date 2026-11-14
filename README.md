@@ -124,3 +124,8 @@ powershell -ExecutionPolicy Bypass -File scripts/verify.ps1
 
 - 问题与建议：开 Issue
 - 想直接找人做课（不用自己部署）：见仓库 About 页的联系方式
+
+## 验证记录
+
+- Docker：docker build 通过，容器内 /api/health 返回 ok=true、首页 200（Docker 29.3 / python:3.11-slim）
+- 门禁：scripts/verify.ps1 78 步全 PASS，pytest 1464 passed / 1 skipped
