@@ -40,7 +40,7 @@
 ### 方式一：Docker（推荐）
 
 ```bash
-git clone https://github.com/your-github-name/coursegenie.git
+git clone https://github.com/wen-sou-chen/coursegenie-open.git
 cd coursegenie
 cp backend/.env.example backend/.env       # 填 LLM_API_KEY，或先保持 mock
 docker compose up --build
